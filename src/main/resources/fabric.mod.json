@@ -10,7 +10,8 @@
   ],
   "contact": {
     "homepage": "https://vasya.dominikaaaa.org/",
-    "sources": "https://github.com/dominikaaaa/vasya"
+    "sources": "https://github.com/dominikaaaa/vasya",
+    "issues": "https://github.com/dominikaaaa/vasya/issues"
   },
 
   "license": "ARR",
