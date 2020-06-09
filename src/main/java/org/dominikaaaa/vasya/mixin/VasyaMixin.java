@@ -1,4 +1,4 @@
-package net.fabricmc.example.mixin;
+package org.dominikaaaa.vasya.mixin;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -8,9 +8,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(TitleScreen.class)
 // Mixins HAVE to be written in java due to constraints in the mixin system.
-public class ExampleMixin {
+public class VasyaMixin {
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
-        System.out.println("This line is printed by an example mod mixin!");
+        System.out.println("This line is printed by an vasya mod mixin!");
     }
 }

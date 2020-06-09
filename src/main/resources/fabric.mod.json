@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "vasya",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Vasya",
+  "description": "VasyaDescription",
   "authors": [
-    "Me!"
+    "dominikaaaa"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://vasya.dominikaaaa.org/",
+    "sources": "https://github.com/dominikaaaa/vasya"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "ARR",
+  "icon": "assets/vasya/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+      "org.dominikaaaa.vasya.VasyaKt::init"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "vasya.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.7.1",
