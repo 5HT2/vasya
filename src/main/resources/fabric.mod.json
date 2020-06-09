@@ -13,11 +13,15 @@
     "sources": "https://github.com/dominikaaaa/vasya",
     "issues": "https://github.com/dominikaaaa/vasya/issues"
   },
+  "custom": {
+    "modmenu:api": false,
+    "modmenu:clientsideOnly": true
+  },
 
-  "license": "ARR",
+  "license": "All Rights Reserved",
   "icon": "assets/vasya/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "main": [
       "org.dominikaaaa.vasya.VasyaKt::init"
