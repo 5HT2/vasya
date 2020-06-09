@@ -1,16 +1,18 @@
-# Fabric Example Mod - Kotlin
+# Vasya
 
-## Setup
+## Contributing
 
-0. Create a new mod repository by pressing the "Use this template" button and clone the created repository.
+0. `git clone git@github.com:dominikaaaa/vasya.git`
 
-1. Import build.gradle file with IntelliJ IDEA
+1. Import the `build.gradle` file with IntelliJ IDEA
 
-2. Edit build.gradle and mod.json to suit your needs.
-    * The "mixins" object can be removed from mod.json if you do not need to use mixins.
-    * Please replace all occurences of "modid" with your own mod ID - sometimes, a different string may also suffice.
-3. Run!
+2. File > Close Project, then reopen the project (needed to properly import run configurations)
+
+3. You can now hit the green play button in the upper left of IntelliJ
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This project is currently licensed as All Rights Reserved. This will be changed in the future, once it is in a usable state and ready for release. 
+
+Some LGPLv3 code in the modules package is sublicensed from [KAMI Blue](https://github.com/kami-blue/client/), who I am a major contributor to. 
+Any code that is sublicensed will be explicitly stated either in the README.md or in another file, when I get around to it. (Currently none).
