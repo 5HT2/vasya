@@ -35,6 +35,6 @@ fun init() {
      */
     ClientTickCallback.EVENT.register(ClientTickCallback { registerUpdate() })
 
-    TestFeature.toggle(true)
+    TestFeature.enabled = true
 }
 

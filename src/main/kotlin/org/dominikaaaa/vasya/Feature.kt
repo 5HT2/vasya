@@ -4,7 +4,18 @@ package org.dominikaaaa.vasya
  * @author dominikaaaa
  * Created by dominikaaaa on 10/06/20 at 11:26
  */
-open class Feature(val name: String, val description: String?, val category: Category, private var enabled: Boolean = false) {
+open class Feature(val name: String, val description: String?, val category: Category, _enabled: Boolean = false) {
+
+    var enabled = _enabled
+        set(value) {
+            if (field == value) return // Early return if field doesn't actually change
+            field = value
+            if (value)
+                onEnable()
+            else
+                onDisable()
+            onToggle()
+        }
 
     open fun onEnable() {}
 
@@ -14,19 +25,8 @@ open class Feature(val name: String, val description: String?, val category: Cat
 
     open fun onUpdate() {}
 
-    fun toggle(state: Boolean) {
-        if (state && !enabled) {
-            onToggle()
-            onEnable()
-        } else if (!state && enabled) {
-            onToggle()
-            onDisable()
-        }
-        enabled = state
-    }
-
     fun toggle() {
-        toggle(!enabled)
+        enabled = !enabled
     }
 
     open fun registerUpdate() {
