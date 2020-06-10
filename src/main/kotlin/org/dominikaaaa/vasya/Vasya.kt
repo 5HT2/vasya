@@ -1,5 +1,6 @@
 package org.dominikaaaa.vasya
 
+import net.fabricmc.fabric.api.event.client.ClientTickCallback
 import net.minecraft.entity.ItemEntity
 import net.minecraft.entity.passive.SheepEntity
 import net.minecraft.entity.player.PlayerEntity
@@ -7,11 +8,15 @@ import net.minecraft.item.ItemStack
 import net.minecraft.item.Items
 import net.minecraft.util.ActionResult
 import org.dominikaaaa.vasya.events.SheepShearCallback
+import org.dominikaaaa.vasya.features.TestFeature
+import org.dominikaaaa.vasya.features.TestFeature.registerUpdate
 
-
+/**
+ * @author dominikaaaa
+ * Created by dominikaaaa on 10/06/20 at 11:26
+ */
 @Suppress("unused")
 fun init() {
-    println("Hello Fabric world!")
 
     SheepShearCallback.EVENT.register(object: SheepShearCallback {
         override fun interact(player: PlayerEntity, sheep: SheepEntity): ActionResult {
@@ -24,5 +29,12 @@ fun init() {
             return ActionResult.FAIL
         }
     })
+
+    /**
+     * @see Feature.onUpdate
+     */
+    ClientTickCallback.EVENT.register(ClientTickCallback { registerUpdate() })
+
+    TestFeature.toggle(true)
 }
 

@@ -23,7 +23,7 @@
 
   "environment": "client",
   "entrypoints": {
-    "main": [
+    "client": [
       "org.dominikaaaa.vasya.VasyaKt::init"
     ]
   },
