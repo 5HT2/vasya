@@ -1,12 +1,14 @@
 package org.dominikaaaa.vasya
 
 import net.fabricmc.fabric.api.event.client.ClientTickCallback
+import net.minecraft.client.MinecraftClient
 import net.minecraft.entity.ItemEntity
 import net.minecraft.entity.passive.SheepEntity
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.item.Items
 import net.minecraft.util.ActionResult
+import org.dominikaaaa.vasya.events.KeybindCallback
 import org.dominikaaaa.vasya.events.SheepShearCallback
 import org.dominikaaaa.vasya.features.TestFeature
 import org.dominikaaaa.vasya.features.TestFeature.registerUpdate
@@ -34,6 +36,13 @@ fun init() {
      * @see Feature.onUpdate
      */
     ClientTickCallback.EVENT.register(ClientTickCallback { registerUpdate() })
+
+    KeybindCallback.EVENT.register(object: KeybindCallback {
+        override fun press(key: Int): Boolean {
+            MinecraftClient.getInstance().player!!.sendChatMessage("$key was pressed")
+            return true
+        }
+    })
 
     TestFeature.enabled = true
 }
