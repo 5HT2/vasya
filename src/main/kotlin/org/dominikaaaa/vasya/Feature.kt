@@ -4,7 +4,7 @@ package org.dominikaaaa.vasya
  * @author dominikaaaa
  * Created by dominikaaaa on 10/06/20 at 11:26
  */
-open class Feature(val name: String?, val description: String?, val category: Category?, var enabled: Boolean = false) {
+open class Feature(val name: String, val description: String?, val category: Category, private var enabled: Boolean = false) {
 
     open fun onEnable() {}
 
