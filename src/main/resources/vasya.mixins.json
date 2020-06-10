@@ -1,10 +1,9 @@
 {
   "required": true,
-  "package": "org.dominikaaaa.vasya.mixin",
+  "package": "org.dominikaaaa.vasya.mixins",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [
-  ],
   "client": [
+    "SheepShearMixin",
     "VasyaMixin"
   ],
   "injectors": {
