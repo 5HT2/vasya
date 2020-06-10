@@ -10,4 +10,5 @@ object TestFeature : Feature("TestFeature", null, Category.PLAYER) {
     override fun onDisable() {
         println("disabled $name")
     }
+
 }

@@ -38,12 +38,10 @@ fun init() {
     ClientTickCallback.EVENT.register(ClientTickCallback { registerUpdate() })
 
     KeybindCallback.EVENT.register(object: KeybindCallback {
-        override fun press(key: Int): Boolean {
+        override fun press(key: Int) {
+            if (key == 79) TestFeature.toggle() // TODO: bind manager
             MinecraftClient.getInstance().player!!.sendChatMessage("$key was pressed")
-            return true
         }
     })
-
-    TestFeature.enabled = true
 }
 

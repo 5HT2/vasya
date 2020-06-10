@@ -12,6 +12,5 @@ public class KeybindMixin {
     @Inject(at = @At("HEAD"), method = "onKey")
     private void onKey(long window, int key, int scancode, int i, int j, CallbackInfo ci) {
         KeybindCallback.EVENT.invoker().press(key);
-//        System.out.println("\n" + window + "\n" + key + "\n" + scancode + "\n" + i  + "\n" + j + "\n");
     }
 }
