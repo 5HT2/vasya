@@ -5,14 +5,14 @@ import net.fabricmc.fabric.api.event.EventFactory
 import net.minecraft.client.MinecraftClient
 
 interface KeybindCallback {
-    fun press(key: Int)
+    fun press(key: Int, state: Int)
     companion object {
         @JvmField
         val EVENT: Event<KeybindCallback> = EventFactory.createArrayBacked(
             KeybindCallback::class.java
         ) {
             object : KeybindCallback {
-                override fun press(key: Int) {
+                override fun press(key: Int, state: Int) {
                 }
             }
         }
