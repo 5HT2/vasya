@@ -8,6 +8,10 @@ import net.minecraft.client.MinecraftClient
  */
 open class Feature(val name: String, val description: String?, val category: Category, _enabled: Boolean = false) {
 
+    init {
+        Manager.features.add(this)
+    }
+
     var enabled = _enabled
         set(value) {
             if (field == value) return // Early return if field doesn't actually change
@@ -32,6 +36,11 @@ open class Feature(val name: String, val description: String?, val category: Cat
     }
 
     val mc: MinecraftClient = MinecraftClient.getInstance()
+
+    /**
+     * Used to force initialization of all Features at runtime
+     */
+    fun init() {}
 
     open fun registerUpdate() {
         if (enabled) {

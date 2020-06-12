@@ -13,8 +13,8 @@ open class Manager {
         val features: MutableList<Feature> = mutableListOf()
 
         init {
-            features.add(TestFeature)
-            features.add(TestFeatureOther)
+            TestFeature.init()
+            TestFeatureOther.init()
             println("Init Features!")
         }
     }
