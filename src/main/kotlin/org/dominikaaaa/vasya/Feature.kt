@@ -8,7 +8,7 @@ import net.minecraft.client.MinecraftClient
  */
 open class Feature(val name: String, val description: String?, val category: Category, _enabled: Boolean = false) {
 
-    private var enabled = _enabled
+    var enabled = _enabled
         set(value) {
             if (field == value) return // Early return if field doesn't actually change
             field = value
