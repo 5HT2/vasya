@@ -16,3 +16,9 @@ This project is currently licensed as All Rights Reserved. This will be changed 
 
 Some LGPLv3 code in the modules package is sublicensed from [KAMI Blue](https://github.com/kami-blue/client/), who I am a major contributor to. 
 Any code that is sublicensed will be explicitly stated either in the README.md or in another file, when I get around to it. (Currently none).
+
+## Libraries
+
+#### Thanks to
+
+FabricMC for [Fabric](https://github.com/FabricMC/fabric) and [Yarn](https://github.com/FabricMC/yarn)
