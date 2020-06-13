@@ -4,11 +4,14 @@ import org.dominikaaaa.vasya.Feature
 
 object TestFeatureOther : Feature("TestFeature2", null, Category.PLAYER) {
     override fun onEnable() {
-        mc.player?.sendChatMessage("enabled ${TestFeature.name}")
+        mc.player?.sendChatMessage("enabled $name")
     }
 
     override fun onDisable() {
-        mc.player?.sendChatMessage("disabled ${TestFeature.name}")
+        mc.player?.sendChatMessage("disabled $name")
     }
 
+    override fun onUpdate() {
+        mc.player?.sendChatMessage("update $name")
+    }
 }

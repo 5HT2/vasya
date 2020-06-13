@@ -35,18 +35,13 @@ open class Feature(val name: String, val description: String?, val category: Cat
         enabled = !enabled
     }
 
-    val mc: MinecraftClient = MinecraftClient.getInstance()
-
-    /**
-     * Used to force initialization of all Features at runtime
-     */
-    fun init() {}
-
-    open fun registerUpdate() {
+    fun registerUpdate() {
         if (enabled) {
             onUpdate()
         }
     }
+
+    val mc: MinecraftClient = MinecraftClient.getInstance()
 
     enum class Category(s: String) {
         PLAYER("Player"),
