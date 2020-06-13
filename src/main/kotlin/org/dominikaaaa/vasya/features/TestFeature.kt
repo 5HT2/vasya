@@ -12,6 +12,6 @@ object TestFeature : Feature("TestFeature", null, Category.PLAYER, 79) {
     }
 
     override fun onUpdate() {
-        TestFeatureOther.mc.player?.sendChatMessage("update $name")
+        mc.player?.sendChatMessage("update $name")
     }
 }

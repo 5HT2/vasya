@@ -10,10 +10,9 @@ import org.dominikaaaa.vasya.features.TestFeatureOther
  * Used to manage all the features from a convenient list
  */
 object Manager {
-    val features: MutableList<Feature> // DON'T combine declaration and assignment
+    val features: MutableList<Feature> = mutableListOf()
 
     init {
-        features = mutableListOf()
         TestFeature
         TestFeatureOther
         println("Init Features!")

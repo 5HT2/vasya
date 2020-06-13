@@ -5,10 +5,9 @@ package org.dominikaaaa.vasya
  * Created by dominikaaaa on 12/06/20 at 20:09
  */
 object Binds {
-    val binds: HashMap<Feature, Int> // DON'T combine declaration and assignment
+    val binds: HashMap<Feature, Int> = hashMapOf()
 
     init {
-        binds = hashMapOf()
         for (Feature in Manager.features) {
             binds[Feature] = Feature.bind
         }
