@@ -3,6 +3,7 @@ package org.dominikaaaa.vasya
 import net.fabricmc.fabric.api.event.client.ClientTickCallback
 import net.minecraft.client.MinecraftClient
 import org.dominikaaaa.vasya.events.KeybindCallback
+import org.lwjgl.glfw.GLFW
 
 /**
  * @author dominikaaaa
@@ -26,6 +27,10 @@ fun init() {
     KeybindCallback.EVENT.register(object : KeybindCallback {
         override fun press(key: Int, state: Int) {
             if (MinecraftClient.getInstance().player == null) return
+            if (key == GLFW.GLFW_KEY_SEMICOLON) {
+                // TODO: Command system
+            }
+
             for (Binds in Binds.binds) {
                 if (Binds.value == key && state == 1) {
                     Binds.key.toggle()

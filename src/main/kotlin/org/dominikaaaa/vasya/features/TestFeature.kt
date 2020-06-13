@@ -1,8 +1,9 @@
 package org.dominikaaaa.vasya.features
 
 import org.dominikaaaa.vasya.Feature
+import org.lwjgl.glfw.GLFW
 
-object TestFeature : Feature("TestFeature", null, Category.PLAYER, 79) {
+object TestFeature : Feature("TestFeature", null, Category.PLAYER, GLFW.GLFW_KEY_O) {
     override fun onEnable() {
         sendMessage("enabled $name")
     }
