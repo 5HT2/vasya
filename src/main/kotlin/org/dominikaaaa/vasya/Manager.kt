@@ -15,7 +15,7 @@ object Manager {
     init {
         TestFeature
         TestFeatureOther
-        println("Init Features!")
+        println("[${Feature.vasya}] Init Features!")
         println(features)
     }
 }

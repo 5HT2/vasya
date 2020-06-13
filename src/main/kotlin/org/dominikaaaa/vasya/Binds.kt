@@ -11,7 +11,7 @@ object Binds {
         for (Feature in Manager.features) {
             binds[Feature] = Feature.bind
         }
-        println("Init Binds!")
+        println("[${Feature.vasya}] Init Binds!")
         println(binds)
     }
 }

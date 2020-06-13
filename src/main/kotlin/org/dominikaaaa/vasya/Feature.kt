@@ -43,7 +43,7 @@ open class Feature(
 
     val mc: MinecraftClient = MinecraftClient.getInstance()
 
-    fun sendMessage(message: String) { sendRawMessage("[" + TextFormat.GRAY + "\u2c7d\u1d2c" + TextFormat.WHITE + "] $message") }
+    fun sendMessage(message: String) { sendRawMessage("[" + TextFormat.GRAY + vasya + TextFormat.WHITE + "] $message") }
 
     fun sendRawMessage(message: String) { mc.player?.sendMessage(LiteralText(message)) }
 
@@ -56,5 +56,9 @@ open class Feature(
     enum class Category(s: String) {
         PLAYER("Player"),
         WORLD("World")
+    }
+
+    companion object {
+        const val vasya = "\u2c7d\u1d2c"
     }
 }

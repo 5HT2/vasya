@@ -3,8 +3,7 @@
   "package": "org.dominikaaaa.vasya.mixins",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "KeybindMixin",
-    "VasyaMixin"
+    "KeybindMixin"
   ],
   "injectors": {
     "defaultRequire": 1
