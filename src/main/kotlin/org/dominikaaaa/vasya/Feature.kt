@@ -1,6 +1,8 @@
 package org.dominikaaaa.vasya
 
 import net.minecraft.client.MinecraftClient
+import net.minecraft.client.util.TextFormat
+import net.minecraft.text.LiteralText
 
 /**
  * @author dominikaaaa
@@ -37,17 +39,19 @@ open class Feature(
 
     open fun onUpdate() {}
 
-    fun toggle() {
-        enabled = !enabled
-    }
+    fun toggle() { enabled = !enabled }
+
+    val mc: MinecraftClient = MinecraftClient.getInstance()
+
+    fun sendMessage(message: String) { sendRawMessage("[" + TextFormat.GRAY + "\u2c7d\u1d2c" + TextFormat.WHITE + "] $message") }
+
+    fun sendRawMessage(message: String) { mc.player?.sendMessage(LiteralText(message)) }
 
     fun registerUpdate() {
         if (enabled) {
             onUpdate()
         }
     }
-
-    val mc: MinecraftClient = MinecraftClient.getInstance()
 
     enum class Category(s: String) {
         PLAYER("Player"),
