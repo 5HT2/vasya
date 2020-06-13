@@ -13,8 +13,8 @@ import org.dominikaaaa.vasya.features.TestFeatureOther
 @Suppress("unused")
 fun init() {
 
-    /* initialize the Manager */
-    Manager
+    /* initialize the Manager and Binds */
+    Manager; Binds
 
     /**
      * @see Feature.onUpdate
@@ -28,8 +28,11 @@ fun init() {
     KeybindCallback.EVENT.register(object: KeybindCallback {
         override fun press(key: Int, state: Int) {
             if (MinecraftClient.getInstance().player == null) return
-            if (key == 79 && state == 1) TestFeature.toggle() // TODO: bind manager
-            if (key == 80 && state == 1) TestFeatureOther.toggle()
+            for (Binds in Binds.binds) {
+                if (Binds.value == key && state == 1) {
+                    Binds.key.toggle()
+                }
+            }
         }
     })
 }
