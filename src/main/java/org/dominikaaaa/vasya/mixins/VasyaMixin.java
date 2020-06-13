@@ -1,7 +1,6 @@
 package org.dominikaaaa.vasya.mixins;
 
 import net.minecraft.client.gui.screen.TitleScreen;
-import org.dominikaaaa.vasya.features.TestFeature;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

@@ -13,14 +13,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Keyboard.class)
 public class KeybindMixin {
     /**
-     * @see GLFWKeyCallbackI
-     * Will be called when a key is pressed, repeated or released.
-     *
      * @param window   the window that received the event
      * @param key      the keyboard key that was pressed or released
      * @param scancode the system-specific scancode of the key
      * @param action   the key action. One of:<br><table><tr><td>{@link GLFW#GLFW_PRESS PRESS}</td><td>{@link GLFW#GLFW_RELEASE RELEASE}</td><td>{@link GLFW#GLFW_REPEAT REPEAT}</td></tr></table>
      * @param mods     bitfield describing which modifiers keys were held down
+     * @see GLFWKeyCallbackI
+     * Will be called when a key is pressed, repeated or released.
      */
     @Inject(at = @At("HEAD"), method = "onKey")
     private void onKey(long window, int key, int scancode, int action, int mods, CallbackInfo ci) {

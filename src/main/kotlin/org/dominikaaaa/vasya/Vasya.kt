@@ -3,8 +3,6 @@ package org.dominikaaaa.vasya
 import net.fabricmc.fabric.api.event.client.ClientTickCallback
 import net.minecraft.client.MinecraftClient
 import org.dominikaaaa.vasya.events.KeybindCallback
-import org.dominikaaaa.vasya.features.TestFeature
-import org.dominikaaaa.vasya.features.TestFeatureOther
 
 /**
  * @author dominikaaaa
@@ -25,7 +23,7 @@ fun init() {
         }
     })
 
-    KeybindCallback.EVENT.register(object: KeybindCallback {
+    KeybindCallback.EVENT.register(object : KeybindCallback {
         override fun press(key: Int, state: Int) {
             if (MinecraftClient.getInstance().player == null) return
             for (Binds in Binds.binds) {

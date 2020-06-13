@@ -6,7 +6,13 @@ import net.minecraft.client.MinecraftClient
  * @author dominikaaaa
  * Created by dominikaaaa on 10/06/20 at 11:26
  */
-open class Feature(val name: String, val description: String?, val category: Category, val bind: Int, _enabled: Boolean = false) {
+open class Feature(
+    val name: String,
+    val description: String?,
+    val category: Category,
+    val bind: Int,
+    _enabled: Boolean = false
+) {
 
     init {
         Manager.features.add(this)

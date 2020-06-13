@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "vasya",
   "version": "${version}",
-
   "name": "Vasya",
   "description": "VasyaDescription",
   "authors": [
@@ -17,10 +16,8 @@
     "modmenu:api": false,
     "modmenu:clientsideOnly": true
   },
-
   "license": "All Rights Reserved",
   "icon": "assets/vasya/icon.png",
-
   "environment": "client",
   "entrypoints": {
     "client": [
