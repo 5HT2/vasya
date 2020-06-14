@@ -16,10 +16,6 @@ open class Feature(
     _enabled: Boolean = false
 ) {
 
-    init {
-        Manager.features.add(this)
-    }
-
     var enabled = _enabled
         set(value) {
             if (field == value) return // Early return if field doesn't actually change
