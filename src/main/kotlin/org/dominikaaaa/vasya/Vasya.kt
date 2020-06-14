@@ -32,8 +32,8 @@ fun init() {
             }
 
             for (Binds in Binds.binds) {
-                if (Binds.value == key && state == 1) {
-                    Binds.key.toggle()
+                if (Binds.key == key && state == 1) {
+                    Binds.value.toggle()
                 }
             }
         }
