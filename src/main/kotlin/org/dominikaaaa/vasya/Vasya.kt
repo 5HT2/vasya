@@ -1,10 +1,8 @@
 package org.dominikaaaa.vasya
 
-import com.mojang.brigadier.CommandDispatcher
-import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback
 import net.fabricmc.fabric.api.event.client.ClientTickCallback
 import net.minecraft.client.MinecraftClient
-import net.minecraft.server.command.ServerCommandSource
+import org.dominikaaaa.vasya.events.ChatMessageCallback
 import org.dominikaaaa.vasya.events.KeybindCallback
 import org.lwjgl.glfw.GLFW
 
@@ -42,12 +40,23 @@ fun init() {
         }
     })
 
-    CommandRegistrationCallback.EVENT.register(object : CommandRegistrationCallback {
+/*    CommandRegistrationCallback.EVENT.register(object : CommandRegistrationCallback {
         override fun register(dispatcher: CommandDispatcher<ServerCommandSource>, dedicated: Boolean) {
             for (command in Manager.commands) {
                 command.dispatch(dispatcher)
             }
         }
+    })*/
+
+    ChatMessageCallback.EVENT.register(object : ChatMessageCallback {
+        override fun send(message: String): Boolean {
+            if (message.startsWith(";")) {
+                // TODO: Command system
+                return true
+            }
+            return false
+        }
     })
+
 }
 
