@@ -8,8 +8,8 @@ object Binds {
     val binds: HashMap<Int, Feature> = hashMapOf()
 
     init {
-        for (Feature in Manager.features) {
-            binds[Feature.bind] = Feature
+        for (feature in Manager.features) {
+            binds[feature.bind] = feature
         }
         println("[${Feature.vasya}] Init Binds!")
         println(binds)

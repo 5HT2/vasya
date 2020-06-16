@@ -1,7 +1,10 @@
 package org.dominikaaaa.vasya
 
+import com.mojang.brigadier.CommandDispatcher
+import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback
 import net.fabricmc.fabric.api.event.client.ClientTickCallback
 import net.minecraft.client.MinecraftClient
+import net.minecraft.server.command.ServerCommandSource
 import org.dominikaaaa.vasya.events.KeybindCallback
 import org.lwjgl.glfw.GLFW
 
@@ -19,8 +22,8 @@ fun init() {
      * @see Feature.onUpdate
      */
     ClientTickCallback.EVENT.register(ClientTickCallback {
-        for (Feature in Manager.features) {
-            Feature.registerUpdate()
+        for (feature in Manager.features) {
+            feature.registerUpdate()
         }
     })
 
@@ -31,10 +34,18 @@ fun init() {
                 // TODO: Command system
             }
 
-            for (Binds in Binds.binds) {
-                if (Binds.key == key && state == 1) {
-                    Binds.value.toggle()
+            for (bind in Binds.binds) {
+                if (bind.key == key && state == 1) {
+                    bind.value.toggle()
                 }
+            }
+        }
+    })
+
+    CommandRegistrationCallback.EVENT.register(object : CommandRegistrationCallback {
+        override fun register(dispatcher: CommandDispatcher<ServerCommandSource>, dedicated: Boolean) {
+            for (command in Manager.commands) {
+                command.dispatch(dispatcher)
             }
         }
     })
