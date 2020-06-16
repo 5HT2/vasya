@@ -39,10 +39,6 @@ open class Feature(
 
     val mc: MinecraftClient = MinecraftClient.getInstance()
 
-    fun sendMessage(message: String) { sendRawMessage("[" + TextFormat.GRAY + vasya + TextFormat.WHITE + "] $message") }
-
-    fun sendRawMessage(message: String) { mc.player?.sendMessage(LiteralText(message)) }
-
     fun registerUpdate() {
         if (enabled) {
             onUpdate()
@@ -55,6 +51,10 @@ open class Feature(
     }
 
     companion object {
+        fun sendMessage(message: String) { sendRawMessage("[" + TextFormat.GRAY + vasya + TextFormat.WHITE + "] $message") }
+
+        fun sendRawMessage(message: String) { MinecraftClient.getInstance().player?.sendMessage(LiteralText(message)) }
+
         const val vasya = "\u2c7d\u1d2c"
     }
 }
