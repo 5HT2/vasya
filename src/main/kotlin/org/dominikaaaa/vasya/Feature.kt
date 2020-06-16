@@ -35,7 +35,9 @@ open class Feature(
 
     open fun onUpdate() {}
 
-    fun toggle() { enabled = !enabled }
+    fun toggle() {
+        enabled = !enabled
+    }
 
     val mc: MinecraftClient = MinecraftClient.getInstance()
 
@@ -51,9 +53,13 @@ open class Feature(
     }
 
     companion object {
-        fun sendMessage(message: String) { sendRawMessage("[" + TextFormat.GRAY + vasya + TextFormat.WHITE + "] $message") }
+        fun sendMessage(message: String) {
+            sendRawMessage("[" + TextFormat.GRAY + vasya + TextFormat.WHITE + "] $message")
+        }
 
-        fun sendRawMessage(message: String) { MinecraftClient.getInstance().player?.sendMessage(LiteralText(message)) }
+        fun sendRawMessage(message: String) {
+            MinecraftClient.getInstance().player?.sendMessage(LiteralText(message))
+        }
 
         const val vasya = "\u2c7d\u1d2c"
     }
