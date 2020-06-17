@@ -15,7 +15,7 @@ import java.util.*
 fun main() {
     Scanner(System.`in`).use { s ->
         val dispatcher = CommandDispatcher<CmdSource>()
-
+sss
         dispatcher.register(
             LiteralArgumentBuilder.literal<CmdSource>("hello")
                 .then(LiteralArgumentBuilder.literal<CmdSource>("world")
