@@ -20,7 +20,7 @@ fun main() {
             LiteralArgumentBuilder.literal<CmdSource>("hello")
                 .then(LiteralArgumentBuilder.literal<CmdSource>("world")
                     .executes {
-                        Feature.sendMessage("Hello world!")
+                        println("Hello world!")
                         0
                     })
         )
