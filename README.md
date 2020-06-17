@@ -1,5 +1,9 @@
 # Vasya
 
+[![time tracker](https://wakatime.com/badge/github/dominikaaaa/vasya.svg)](https://wakatime.com/badge/github/dominikaaaa/vasya)
+[![Travis (.com)](https://img.shields.io/travis/com/dominikaaaa/vasya)](https://travis-ci.com/dominikaaaa/vasya)
+[![HitCount](http://hits.dwyl.com/dominikaaaa/vasya.svg)](http://hits.dwyl.com/dominikaaaa/vasya)
+
 ## Contributing
 
 0. `git clone git@github.com:dominikaaaa/vasya.git`
