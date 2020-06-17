@@ -1,7 +1,7 @@
 # Vasya
 
 [![time tracker](https://wakatime.com/badge/github/dominikaaaa/vasya.svg)](https://wakatime.com/badge/github/dominikaaaa/vasya)
-[![Travis (.com)](https://img.shields.io/travis/com/dominikaaaa/vasya)](https://travis-ci.com/dominikaaaa/vasya)
+[![Build Status](https://camo.githubusercontent.com/955d42f97998aa9265343784041a0a01bcc94c75/68747470733a2f2f7472617669732d63692e636f6d2f646f6d696e696b616161612f76617379612e7376673f746f6b656e3d316335667379796a3838505051745a4c53707264266272616e63683d6d6173746572)](https://travis-ci.com/dominikaaaa/vasya)
 [![HitCount](http://hits.dwyl.com/dominikaaaa/vasya.svg)](http://hits.dwyl.com/dominikaaaa/vasya)
 
 ## Contributing
