@@ -5,16 +5,18 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import com.mojang.brigadier.context.CommandContext
 import org.dominikaaaa.vasya.Command
 import org.dominikaaaa.vasya.Feature
-import org.dominikaaaa.vasya.utils.CommandSource
+import org.dominikaaaa.vasya.utils.VasyaCommandSource
 
 object TestCommand : Command("Test", null, 1, 1) {
-    override fun dispatch(dispatcher: CommandDispatcher<CommandSource>) {
+    override fun dispatch(dispatcher: CommandDispatcher<VasyaCommandSource>) {
         dispatcher.register(
-            LiteralArgumentBuilder.literal<CommandSource>("isweartogodifthisworks")
-                .then(LiteralArgumentBuilder.literal<CommandSource>("bruh").executes { context: CommandContext<CommandSource> ->
-                    Feature.sendMessage("fuck you")
-                    0
-                })
+            LiteralArgumentBuilder.literal<VasyaCommandSource>("test")
+                .then(
+                    LiteralArgumentBuilder.literal<VasyaCommandSource>("epic")
+                        .executes { context: CommandContext<VasyaCommandSource> ->
+                            Feature.sendMessage("congrats dumb head")
+                            0
+                        })
         )
     }
 }

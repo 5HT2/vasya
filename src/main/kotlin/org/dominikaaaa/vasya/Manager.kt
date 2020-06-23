@@ -1,8 +1,10 @@
 package org.dominikaaaa.vasya
 
+import com.mojang.brigadier.CommandDispatcher
 import org.dominikaaaa.vasya.commands.TestCommand
 import org.dominikaaaa.vasya.features.TestFeature
 import org.dominikaaaa.vasya.features.TestFeatureOther
+import org.dominikaaaa.vasya.utils.VasyaCommandSource
 
 /**
  * @author dominikaaaa
@@ -13,6 +15,9 @@ import org.dominikaaaa.vasya.features.TestFeatureOther
 object Manager {
     val features = listOf(TestFeature, TestFeatureOther)
     val commands = listOf(TestCommand)
+
+    @JvmField
+    val dispatcher = CommandDispatcher<VasyaCommandSource>()
 
     init {
         println("[${Feature.vasya}] Init Features!")
