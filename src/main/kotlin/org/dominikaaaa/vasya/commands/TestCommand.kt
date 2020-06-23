@@ -1,19 +1,19 @@
 package org.dominikaaaa.vasya.commands
 
 import com.mojang.brigadier.CommandDispatcher
+import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import com.mojang.brigadier.context.CommandContext
-import net.minecraft.server.command.CommandManager
-import net.minecraft.server.command.ServerCommandSource
 import org.dominikaaaa.vasya.Command
 import org.dominikaaaa.vasya.Feature
+import org.dominikaaaa.vasya.utils.CommandSource
 
 object TestCommand : Command("Test", null, 1, 1) {
-    override fun dispatch(dispatcher: CommandDispatcher<ServerCommandSource>) {
+    override fun dispatch(dispatcher: CommandDispatcher<CommandSource>) {
         dispatcher.register(
-            CommandManager.literal("isweartogodifthisworks")
-                .then(CommandManager.literal("bruh").executes { context: CommandContext<ServerCommandSource?>? ->
+            LiteralArgumentBuilder.literal<CommandSource>("isweartogodifthisworks")
+                .then(LiteralArgumentBuilder.literal<CommandSource>("bruh").executes { context: CommandContext<CommandSource> ->
                     Feature.sendMessage("fuck you")
-                    1
+                    0
                 })
         )
     }

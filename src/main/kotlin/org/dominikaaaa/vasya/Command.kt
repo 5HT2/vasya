@@ -1,8 +1,8 @@
 package org.dominikaaaa.vasya
 
 import com.mojang.brigadier.CommandDispatcher
-import net.minecraft.server.command.ServerCommandSource
 import org.dominikaaaa.vasya.exceptions.CommandArgSizeException
+import org.dominikaaaa.vasya.utils.CommandSource
 
 /**
  * @author dominikaaaa
@@ -21,5 +21,5 @@ open class Command(
         }
     }
 
-    open fun dispatch(dispatcher: CommandDispatcher<ServerCommandSource>) {}
+    open fun dispatch(dispatcher: CommandDispatcher<CommandSource>) {}
 }
