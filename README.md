@@ -18,10 +18,7 @@ Contributions are welcome. I'm not looking for help adding modules, I just never
 
 ## License
 
-This project is currently licensed as All Rights Reserved. This will be changed in the future, once it is in a usable state and ready for release. 
-
-Some LGPLv3 code in the modules package is sublicensed from [KAMI Blue](https://github.com/kami-blue/client/), who I am a major contributor to. 
-Any code that is sublicensed will be explicitly stated either in the README.md or in another file, when I get around to it. (Currently none).
+This project is currently ISC and does not sublicense any code. All libraries used are licensed under their respective licenses. 
 
 ## Libraries
 
