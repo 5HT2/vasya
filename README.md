@@ -6,6 +6,8 @@
 
 ## Contributing
 
+Contributions are welcome. I'm not looking for help adding modules, I just never finished implementing brigadier so I didn't add a bind system. I'll gladly do everything myself as long as there's brigadier impl. A full todo list is on the website.
+
 0. `git clone git@github.com:dominikaaaa/vasya.git`
 
 1. Import the `build.gradle` file with IntelliJ IDEA
