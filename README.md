@@ -4,6 +4,11 @@
 [![Build Status](https://camo.githubusercontent.com/955d42f97998aa9265343784041a0a01bcc94c75/68747470733a2f2f7472617669732d63692e636f6d2f646f6d696e696b616161612f76617379612e7376673f746f6b656e3d316335667379796a3838505051745a4c53707264266272616e63683d6d6173746572)](https://travis-ci.com/dominikaaaa/vasya)
 [![HitCount](http://hits.dwyl.com/dominikaaaa/vasya.svg)](http://hits.dwyl.com/dominikaaaa/vasya)
 
+
+## Archived
+
+As of November 23rd, 2020, this repository is archived. I learned a few small things, as I was still relatively new to Kotlin when I started this project, and it was refreshing working with Fabric. This project will not be continued, but I might make a complete version in the future, under a different name. 
+
 ## Contributing
 
 Contributions are welcome. I'm not looking for help adding modules, I just never finished implementing brigadier so I didn't add a bind system. I'll gladly do everything myself as long as there's brigadier impl. A full todo list is on the website.
