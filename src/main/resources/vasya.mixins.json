@@ -3,7 +3,9 @@
   "package": "org.dominikaaaa.vasya.mixins",
   "compatibilityLevel": "JAVA_8",
   "client": [
+    "ClientCommandSourceMixin",
     "ClientPlayerEntityMixin",
+    "ClientPlayNetworkHandlerMixin",
     "KeybindMixin"
   ],
   "injectors": {

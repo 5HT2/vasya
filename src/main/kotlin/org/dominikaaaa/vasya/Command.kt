@@ -2,7 +2,7 @@ package org.dominikaaaa.vasya
 
 import com.mojang.brigadier.CommandDispatcher
 import org.dominikaaaa.vasya.exceptions.CommandArgSizeException
-import org.dominikaaaa.vasya.utils.CommandSource
+import org.dominikaaaa.vasya.utils.VasyaCommandSource
 
 /**
  * @author dominikaaaa
@@ -21,5 +21,5 @@ open class Command(
         }
     }
 
-    open fun dispatch(dispatcher: CommandDispatcher<CommandSource>) {}
+    open fun dispatch(dispatcher: CommandDispatcher<VasyaCommandSource>) {}
 }
